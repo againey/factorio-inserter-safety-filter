@@ -24,6 +24,10 @@ local function on_built_inserter(event)
 	local surface = inserter.surface
 	local tile = surface.get_tile(drop.x or drop[1], drop.y or drop[2])
 
+	--[[
+	--Unlike an inserter dropping into a ghost crafting machine, a ghost tile does not block an inserter from
+	--dropping items through it into oblivion, so let's not actually consider this case.
+
 	local tile_ghosts = tile.get_tile_ghosts()
 	local top_tile_ghost = nil
 	for _, ghost in ipairs(tile_ghosts) do
@@ -33,9 +37,6 @@ local function on_built_inserter(event)
 		end
 	end
 
-	--[[
-	--Unlick an inserter dropping into a ghost crafting machine, a ghost tile does not block an inserter from
-	--dropping items through it into oblivion, so let's not actually consider this case.
 	if top_tile_ghost ~= nil then
 		if tile_destroys_dropped_items(top_tile_ghost) then
 			apply_safety_filter(inserter)
