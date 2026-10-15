@@ -1,0 +1,18 @@
+{
+	"name": "inserter-safety-filter",
+	"version": "1.0.0",
+	"title": "Inserter Safety Filter",
+	"description": "Automatically adds an empty filter to an inserter when first placed if that inserter's drop location will instantly destroy items.",
+	"author": "Andy Gainey",
+	"factorio_version": "2.0",
+	"dependencies": [
+		"base >= 2.0"
+	],
+	"quality_required": false,
+	"space_travel_required": false,
+	"spoiling_required": false,
+	"freezing_required": false,
+	"segmented_units_required": false,
+	"expansion_shaders_required": false,
+	"expansion_required": false
+}

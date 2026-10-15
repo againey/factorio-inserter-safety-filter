@@ -1,0 +1,8 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 15. 10. 2026
+  Features:
+    - Initial release
+    - Auto-set empty filter when player places inserter outputting to destructive tile
+    - Also filter when target tile is marked for deconstruction above a destructive tile
+    - Skips safety filter behavior when placing blueprints containing inserters
